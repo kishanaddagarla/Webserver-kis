@@ -1,0 +1,47 @@
+yum install httpd
+systemctl start httpd
+systemctl status httpd
+DISABLED Service
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Tue 2018-05-29 15:42:29 UTC; 30s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 1235 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─1235 /usr/sbin/httpd -DFOREGROUND
+           ├─1236 /usr/sbin/httpd -DFOREGROUND
+           ├─1237 /usr/sbin/httpd -DFOREGROUND
+           ├─1238 /usr/sbin/httpd -DFOREGROUND
+           ├─1239 /usr/sbin/httpd -DFOREGROUND
+           └─1240 /usr/sbin/httpd -DFOREGROUND
+
+May 29 15:42:29 web-server-kis systemd[1]: Starting The Apache HTTP Server...
+May 29 15:42:29 web-server-kis systemd[1]: Started The Apache HTTP Server.
+[root@web-server-kis ~]# systemctl enable httpd I(Enabled - services httpd)
+Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
+[root@web-server-kis ~]# systemctl start httpd 
+[root@web-server-kis ~]# systemctl status httpd 
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Tue 2018-05-29 15:42:29 UTC; 10min ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 1235 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─1235 /usr/sbin/httpd -DFOREGROUND
+           ├─1236 /usr/sbin/httpd -DFOREGROUND
+           ├─1237 /usr/sbin/httpd -DFOREGROUND
+           ├─1238 /usr/sbin/httpd -DFOREGROUND
+           ├─1239 /usr/sbin/httpd -DFOREGROUND
+           └─1240 /usr/sbin/httpd -DFOREGROUND
+
+May 29 15:42:29 web-server-kis systemd[1]: Starting The Apache HTTP Server...
+May 29 15:42:29 web-server-kis systemd[1]: Started The Apache HTTP Server.
+
+
+systemctl stop httpd
+
+
