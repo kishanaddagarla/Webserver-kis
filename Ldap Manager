@@ -1,0 +1,30 @@
+https://www.google.co.uk/search?q=ldap+account+manager&oq=ldap+account+&aqs=chrome.1.69i57j0l5.21152j0j7&sourceid=chrome&ie=UTF-8
+
+
+checking for php sample tobulid in the web server 
+
+https://www.ldap-account-manager.org/lamcms/releases
+
+Choose version : LDAP Account Manager 5.7
+rigth click and copy link address : http://prdownloads.sourceforge.net/lam/ldap-account-manager-5.7.tar.bz2?download
+delete ? download in the end of the link 
+http://prdownloads.sourceforge.net/lam/ldap-account-manager-5.7.tar.bz2
+paste it using wget http://prdownloads.sourceforge.net/lam/ldap-account-manager-5.7.tar.bz2?download
+
+this will insatll the packages and bulid 
+
+exract tar file 
+tar -xf ldap-account-manager-5.7.tar.bz2
+
+after exracting it check it with ls 
+
+mv ldap-account-manager-5.7 lam
+
+cd lam
+
+check the website status using the link below:
+http://35.237.39.224/lam/ (public address for the cloud server)
+
+yum list all | grep php | grep ldap
+
+found --- php-ldap.x86_64 
