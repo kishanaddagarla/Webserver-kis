@@ -65,6 +65,63 @@ chown apache:apache lam -R
 
 do a refereh on the web page , only error now 
 Please enter the configuration and create a server profile.
+copy rdportal.zip from windows to linux using xftp6 sortware 
+
+[root@web-server-kis html]# unzip /tmp/rdportal.zip
+Archive:  /tmp/rdportal.zip
+
+after this try the browser again with /rdportal 
+
+/rdportal 
+
+http://35.231.146.220/rdportal
+
+[root@web-server-kis html]# cd /var/log/
+[root@web-server-kis log]# l
+-bash: l: command not found
+[root@web-server-kis log]# ll
+total 784
+drwx------. 2 root   root       23 May 23 15:48 audit
+-rw-------. 1 root   root    58414 May 30 15:18 boot.log
+-rw-------. 1 root   utmp      768 May 30 11:40 btmp
+drwxr-xr-x. 2 chrony chrony      6 Apr 12 17:37 chrony
+-rw-------. 1 root   root     7540 May 30 15:40 cron
+-rw-r--r--  1 root   root    27221 May 30 15:18 dmesg
+-rw-r--r--  1 root   root    27557 May 30 12:43 dmesg.old
+-rw-r--r--. 1 root   root        0 May 23 15:48 firewalld
+-rw-------. 1 root   root     2616 May 23 15:57 grubby
+-rw-r--r--. 1 root   root      193 May 16 17:42 grubby_prune_debug
+drwx------  2 root   root       41 May 29 15:42 httpd
+-rw-r--r--. 1 root   root   292292 May 30 15:31 lastlog
+-rw-------. 1 root   root     3426 May 30 15:19 maillog
+-rw-------. 1 root   root   571416 May 30 15:40 messages
+drwxr-xr-x. 2 ntp    ntp         6 Apr 13 12:52 ntpstats
+drwxr-xr-x. 2 root   root        6 Aug  4  2017 qemu-ga
+-rw-------. 1 root   root    20237 May 30 15:32 secure
+-rw-------. 1 root   root        0 May 16 17:42 spooler
+-rw-------. 1 root   root        0 May 16 17:42 tallylog
+drwxr-xr-x. 2 root   root       23 May 23 15:48 tuned
+-rw-rw-r--. 1 root   utmp    31104 May 30 15:19 wtmp
+-rw-------. 1 root   root     5931 May 30 14:04 yum.log
+[root@web-server-kis log]# ls
+audit     btmp    cron   dmesg.old  grubby              httpd    maillog   ntpstats  secure   tallylog  wtmp
+boot.log  chrony  dmesg  firewalld  grubby_prune_debug  lastlog  messages  qemu-ga   spooler  tuned     yum.log
+[root@web-server-kis log]# cd httpd
+[root@web-server-kis httpd]# ls
+access_log  error_log
+[root@web-server-kis httpd]# ls -l
+total 56
+-rw-r--r-- 1 root root 41832 May 30 15:41 access_log
+-rw-r--r-- 1 root root  9752 May 30 15:19 error_log
+[root@web-server-kis httpd]# ls -lt
+total 56
+-rw-r--r-- 1 root root 41832 May 30 15:41 access_log
+-rw-r--r-- 1 root root  9752 May 30 15:19 error_log
+
+
+
+
+
 
 
 
