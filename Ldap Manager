@@ -28,3 +28,85 @@ http://35.237.39.224/lam/ (public address for the cloud server)
 yum list all | grep php | grep ldap
 
 found --- php-ldap.x86_64 
+
+yum install php-ldap.x86_64 -y
+systemctl restart httpd
+
+ldap error is gone when trying to access website again 
+
+next:
+ps -ef | grep http
+[root@web-server-kis lam]# ps -ef | grep http
+root      1906     1  0 13:46 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1907  1906  0 13:46 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1908  1906  0 13:46 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1909  1906  0 13:46 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1910  1906  0 13:46 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1911  1906  0 13:46 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache    1912  1906  0 13:46 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+root      1922  1044  0 13:48 pts/0    00:00:00 grep --color=auto http
+
+create exetuceble permision for apache user in lam dierctory
+[root@web-server-kis html]# ls -lr
+total 15192
+-rw-r--r--  1 root root 15549854 Mar 15  2017 ldap-account-manager-5.7.tar.bz2
+drwxr-xr-x 12 root root      323 Mar 14  2017 lam
+-rw-r--r--  1 root root       38 May 30 12:56 index.html
+[root@web-server-kis html]# chmod 777 lam
+[root@web-server-kis html]# ls -lr
+total 15192
+-rw-r--r--  1 root root 15549854 Mar 15  2017 ldap-account-manager-5.7.tar.bz2
+drwxrwxrwx 12 root root      323 Mar 14  2017 lam
+-rw-r--r--  1 root root       38 May 30 12:56 index.html
+
+https://www.elated.com/articles/understanding-permissions/
+
+chown apache:apache lam -R
+
+do a refereh on the web page , only error now 
+Please enter the configuration and create a server profile.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
